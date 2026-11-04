@@ -1,24 +1,28 @@
 # Naoki Kaneko
 
-CGパイプラインエンジニアを目指しています。IT保守・Web制作の実務経験をベースに、Houdini/Blender/DCCツールとPythonを組み合わせたパイプライン開発に注力しています。
+CG パイプラインエンジニア / テクニカルアーティストを目指しています。IT保守と Web 制作の実務経験をもとに、Houdini・Blender・OpenUSD と Python で、制作の流れを支えるツールを作っています。
 
-## Pipeline Tools Portfolio
+- サイト: https://naokikaneko.com
 
-| プロジェクト | 概要 | 技術 |
-|---|---|---|
-| [**pipeinit**](https://github.com/nokgc333/pipeinit) | プロジェクトフォルダ構成をルールYAMLから自動生成・命名規則を検証するCLI | Python / Click / PyYAML |
-| [**scene-doctor**](https://github.com/nokgc333/scene-doctor) | Houdiniシーンのジオメトリ欠陥・ノード構造・命名違反を自動検出するHDA/PDGツール。Houdini内蔵PySide6のカスタムドッキングパネルも搭載 | Python / Houdini(hython) / PDG / PySide6 |
-| [**pipeboard**](https://github.com/nokgc333/pipeboard) | ショット/アセット管理カンバンボード。同一バックエンドをWeb(Next.js)とPySide6デスクトップクライアントの両方から利用可能 | FastAPI / SQLAlchemy / Next.js / React / PySide6 |
-| [**queuewatch**](https://github.com/nokgc333/queuewatch) | レンダー/タスクキュー監視ダッシュボード。失敗ジョブの自動リトライ・稼働率可視化 | FastAPI / Celery / Redis / React |
-| [**unibridge**](https://github.com/nokgc333/unibridge) | Houdini↔BlenderのUSD相互変換・検証ツール。座標系/スケール不整合を自動検出 | Python / OpenUSD(usd-core) / Houdini / Blender |
+## 代表作
 
-いずれもTDD（RED-GREEN-REFACTOR）・Ports & Adapters設計・ADR（設計判断の明文化）を共通の作法として実装し、実際のHoudini/Blender環境での動作確認まで実施しています。詳細は各リポジトリのREADME・docs/を参照してください。
+- [naokikaneko](https://github.com/nokgc333/naokikaneko): 個人のポートフォリオサイト（実績・ブログ・お問い合わせ）。Next.js・TypeScript・Tailwind CSS
+- [scene-doctor](https://github.com/nokgc333/scene-doctor): Houdini のシーンの欠陥・ノード構造・命名違反を検出する HDA/PDG ツール。Houdini 内蔵の PySide6 パネルつき
+- [pipeboard](https://github.com/nokgc333/pipeboard): ショット/アセット管理のカンバン。同じバックエンドを、Web（Next.js）と PySide6 のデスクトップクライアントの両方から使う
+- [queuewatch](https://github.com/nokgc333/queuewatch): レンダー/タスクキューの監視ダッシュボード。失敗ジョブの自動リトライと、稼働率の可視化
+- [unibridge](https://github.com/nokgc333/unibridge): Houdini と Blender の間で受け渡す USD の整合検査ツール。座標系・スケール・命名の不整合を検出する
+- [pipeinit](https://github.com/nokgc333/pipeinit): ルールの YAML から、プロジェクトのフォルダを作り、命名規則を検証する CLI
 
-## Tech Stack
+ほかに、[frame-slicer](https://github.com/nokgc333/frame-slicer)（フレーム範囲を分割して QueueWatch に投入する CLI）と、[space-log](https://github.com/nokgc333/space-log)（架空の CG スタジオのサイト）があります。
 
-- **DCC連携**: Houdini (hython, HDA, PDG/TOPs), Blender (bpy)
-- **データ交換**: OpenUSD (usd-core)
-- **Backend**: Python, FastAPI, SQLAlchemy, Celery
-- **Frontend**: TypeScript, Next.js, React, Vite
-- **Desktop GUI**: PySide6 (Qt)
-- **開発手法**: TDD, Ports & Adapters, ADR (Architecture Decision Records)
+## 進め方
+
+どのリポジトリも、TDD（RED-GREEN-REFACTOR）、Ports & Adapters の設計、ADR（設計判断の記録）を共通の作法にしています。実機で確かめた範囲と、確かめていない範囲は、各リポジトリの README の「検証」「既知の制限事項」に書いています。
+
+## 技術
+
+- DCC 連携: Houdini（hython・HDA・PDG）、Blender（bpy）
+- データ交換: OpenUSD（usd-core）
+- バックエンド: Python、FastAPI、SQLAlchemy、Celery
+- フロントエンド: TypeScript、Next.js、React
+- デスクトップ: PySide6（Qt）
